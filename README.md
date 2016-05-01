@@ -1,4 +1,4 @@
-# MdSpec: Testable Markdown for Documentation Testing :memo:
+# MdSpec: Markdown as a Testable Document :memo:
 
 **MdSpec** is a testing tool for example codes of your markdown files like ***README.md***.
 
