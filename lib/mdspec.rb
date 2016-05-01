@@ -1,5 +1,12 @@
+require "optparse"
+require "yaml"
+require "kramdown"
+require "colorize"
 require "mdspec/version"
-
-module Mdspec
-  # Your code goes here...
-end
+require "mdspec/parser"
+require "mdspec/runner"
+require "mdspec/runner/base_runner"
+require "mdspec/runner/diff"
+require "mdspec/runner/bash_repl"
+require "mdspec/runner/command"
+require "mdspec/cli"

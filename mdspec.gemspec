@@ -5,7 +5,7 @@ require 'mdspec/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "mdspec"
-  spec.version       = Mdspec::VERSION
+  spec.version       = MdSpec::VERSION
   spec.authors       = ["Hiroyuki Sano"]
   spec.email         = ["sh19910711@gmail.com"]
 
@@ -26,6 +26,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency "colorize", "~> 0.7"
+  spec.add_runtime_dependency "kramdown", "~> 1.10"
+
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.4"
+  spec.add_development_dependency "yaml-lint", "~> 0.0.7"
 end

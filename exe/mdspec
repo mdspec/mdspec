@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require "mdspec"
+MdSpec::CLI.new(ARGV.clone)

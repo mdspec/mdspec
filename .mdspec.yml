@@ -1,0 +1,16 @@
+# global rules
+rules:
+  # pre-defined rule to run each command
+  shell: bash-repl
+
+  # it is able to define a custom command
+  yml:
+    type: command
+    command: yaml-lint
+
+# rules for specified files
+README.md:
+  # match pattern
+  /Config/:
+    type: diff
+    diff: .mdspec.yml
