@@ -1,0 +1,26 @@
+language: ruby
+
+rvm:
+  - "2.3.0"
+  - "2.2"
+  - "2.1"
+  - "2.0"
+  - "1.9"
+
+cache:
+  bundler: true
+
+script:
+  - bundle exec rake
+  - bundle exec mdspec README.md
+
+deploy:
+  provider: rubygems
+  api_key:
+    master:
+      secure: "Q26pMTrS3l/JHFbo/Qk/rhmLhYz6oMJppENKwiaBuR1TjzOpavgUAaFJpgUUgl0P+iHy0Oja3YBoSUm4TEacYjiZfH3FFD8TYsGCuQbN4dvmH9xhn7yycS3zTICTWi6iY0GY1h/k6kjre6gxpDOTQt/O0PBrBN4aa3hjBfbZSXCRMI2aAhJm82mU5q14QIfmJYepXnO5XJ9sZleK7RDDddm/ey3a3XKkR3Tx6kQwrU8u6GJWJRXBVC3dMHYD2BVgWk8AawttSZPJezgPoUrp53p4Ha15fJA+KEWf64azPvqsY4FrofYVh3+mjuHi/BVXJC0NAaI6ijHEkZsFnpA8ERZ6M5XjQ3nsrICqc8lwJwHBAY+sHlZc1W2NrFbg3HDokca/efl+5MHkr9YHOnQdINGAH48CXdMX98bOonhaNwhe1NLADTzDklUI/nzj17t4RsgoB5qZcJ6q6blmKeJql6Q6PsW4xLpTmMGY5aDPulPFJRPqJYy9UXwT82MkBWrMc7B3QpkQ8Fb0FWaxNGa3+dCteUAU5iU7eqFZscgJyPJlpF5R/ELbSHx+bO/pWDASd5iRHQ+97ca6taW7eSdloPJEP1YKMYo2X0I5kfzMdmjxO1EW632yQq1oqVywE1yDM1FtuMwMTbg1VWenn6Ql6U0pFvx1WHCEg3mlj9mZmM4="
+  gem:
+    master: mdspec
+  on:
+    repo: mdspec/mdspec
+    ruby: "2.3.0"
